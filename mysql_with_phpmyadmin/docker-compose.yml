@@ -14,13 +14,13 @@ services:
     expose:
       - '3306'
     volumes:
-      - /home/hasibur/db-data/mysql:/var/lib/mysql
+      - /home/hasibur/db-data/mysql_with_php:/var/lib/mysql
   phpmyadmin:
     container_name: "admin-tool"
     image: phpmyadmin/phpmyadmin:latest
     ports:
       - 8081:80
     environment:
-      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: password
 volumes:
   my-db:
